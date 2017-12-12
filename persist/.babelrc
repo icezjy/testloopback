@@ -1,0 +1,56 @@
+{
+  "presets": [
+    "nodejs6",
+    "stage-0"
+  ],
+  "retainLines": true,
+  "plugins": ["rewire",
+    [
+      "module-resolver",
+      {
+        "root": [
+          "./src"
+        ],
+        "alias": {
+          "tests": "./tests"
+        }
+      }
+    ]
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "istanbul",
+        "rewire",
+        [
+          "module-resolver",
+          {
+            "root": [
+              "./src"
+            ],
+            "alias": {
+              "tests": "./tests"
+            }
+          }
+        ]
+      ]
+    },
+    "population": {
+      "plugins": [
+        "rewire",
+        [
+          "module-resolver",
+          {
+            "root": [
+              "./src"
+            ],
+            "alias": {
+              "tests": "./tests"
+            }
+          }
+        ]
+      ]
+    }    
+  }
+}
+//Add module exports for babel 6 to support require("") amd syntax - otherwise require("").default

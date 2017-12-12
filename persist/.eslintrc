@@ -1,0 +1,38 @@
+{
+  "extends": "ess",
+  "parser": "babel-eslint",
+  "root": true,
+  "rules": {
+    "eol-last": 2,
+    "no-param-reassign": [2, { "props": false }],
+    "import/order": [2, { "newlines-between": "always" }],
+    "import/newline-after-import": [2]
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  },
+  "globals": {
+    "__DEV__": true,
+    "jasmine": true,
+    "mocha": true,
+    "spyOn": true,
+    "it": true,
+    "xit": true,
+    "describe": true,
+    "xdescribe": true,
+    "expect": true,
+    "done": true,
+    "by": true,
+    "protractor": true,
+    "$": true,
+    "element": true,
+    "beforeEach": true,
+    "afterEach": true,
+    "before": true,
+    "after": true,
+    "browser": true,
+    "restrict": true
+  }
+}
